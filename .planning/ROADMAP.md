@@ -28,7 +28,9 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. User can mark an item done via `done <n>`, using the position number shown by the most recent `list`, and it no longer appears in the pending list
   4. Completed items remain stored in `todos.json` (flagged done, not deleted) rather than being removed
   5. Running the tool from different directories produces independent todo lists, since each directory has its own `todos.json`
-**Plans**: TBD
+**Plans**: 2 plans
+- [ ] 01-01-PLAN.md — Walking Skeleton: scaffold + storage module + `add` slice (end-to-end)
+- [ ] 01-02-PLAN.md — `list` + `done` slices (view pending, complete via positional soft-delete)
 
 ### Phase 2: Global CLI Distribution
 **Goal**: Users can install the tool as a global `todo` command and run it from anywhere with zero external dependencies to install
@@ -48,5 +50,5 @@ Phases execute in numeric order: 1 → 2
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Core Todo Management | 0/TBD | Not started | - |
+| 1. Core Todo Management | 0/2 | Not started | - |
 | 2. Global CLI Distribution | 0/TBD | Not started | - |
