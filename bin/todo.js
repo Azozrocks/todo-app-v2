@@ -39,6 +39,28 @@ function handleList() {
   });
 }
 
+function handleDone(rest) {
+  const n = Number(rest[0]);
+
+  if (!Number.isInteger(n) || n < 1) {
+    console.error('Error: done requires a valid position number from `list`, e.g. todo done 1');
+    process.exit(1);
+  }
+
+  const todos = readTodos();
+  const pending = todos.filter((t) => t.done === false);
+
+  if (n > pending.length) {
+    console.error(`Error: no pending item at position ${n} (there are ${pending.length} pending).`);
+    process.exit(1);
+  }
+
+  const target = pending[n - 1];
+  target.done = true;
+  writeTodos(todos);
+  console.log('Done.');
+}
+
 function main() {
   const [cmd, ...rest] = process.argv.slice(2);
 
@@ -48,6 +70,9 @@ function main() {
       break;
     case 'list':
       handleList();
+      break;
+    case 'done':
+      handleDone(rest);
       break;
     default:
       printUsage();
