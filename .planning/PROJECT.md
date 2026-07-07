@@ -12,17 +12,16 @@ A user can add, view, and complete to-do items from the command line with zero s
 
 ### Validated
 
-(None yet — ship to validate)
+- [x] User can add a new todo item via `add "<text>"` — Validated in Phase 1: Core Todo Management (invoked as `node bin/todo.js add`; bare `todo` command arrives with the Phase 2 global install)
+- [x] User can list pending todo items via `list`, numbered by their position in the pending list — Validated in Phase 1: Core Todo Management
+- [x] User can mark an item done via `done <n>`, where `<n>` is the position number shown by the most recent `list` — Validated in Phase 1: Core Todo Management
+- [x] Completed items are retained in `todos.json` (marked done, not deleted) but hidden from default `list` output — Validated in Phase 1: Core Todo Management
+- [x] `todos.json` is read/written in the current working directory, so different project folders can have independent todo lists — Validated in Phase 1: Core Todo Management
+- [x] Implementation uses only Node.js built-in modules — no npm dependencies — Validated in Phase 1: Core Todo Management (standing constraint, holds going forward)
 
 ### Active
 
-- [ ] User can add a new todo item via `todo add "<text>"`
-- [ ] User can list pending todo items via `todo list`, numbered by their position in the pending list
-- [ ] User can mark an item done via `todo done <n>`, where `<n>` is the position number shown by the most recent `todo list`
-- [ ] Completed items are retained in `todos.json` (marked done, not deleted) but hidden from default `todo list` output
-- [ ] `todos.json` is read/written in the current working directory, so different project folders can have independent todo lists
-- [ ] Tool installs as a global `todo` shell command via npm's `bin` field (shebang script), installable via `npm link` or `npm i -g .`
-- [ ] Implementation uses only Node.js built-in modules — no npm dependencies
+- [ ] Tool installs as a global `todo` shell command via npm's `bin` field (shebang script), installable via `npm link` or `npm i -g .` — Phase 2: Global CLI Distribution (DIST-01/DIST-02)
 
 ### Out of Scope
 
@@ -37,6 +36,8 @@ A user can add, view, and complete to-do items from the command line with zero s
 
 Personal productivity CLI, greenfield build (no prior version despite the "v2" working title). Target user is a developer comfortable installing a global CLI tool via npm.
 
+**Current state:** Phase 1 (Core Todo Management) complete — `add`/`list`/`done` work end-to-end via `node bin/todo.js`, backed by `lib/storage.js` and a per-cwd `todos.json`. 12/12 tests passing. Global `todo` command (npm `bin` field) is the sole remaining item, scoped to Phase 2.
+
 ## Constraints
 
 - **Dependencies**: Node.js built-ins only (e.g. `fs`, `path`) — no npm packages — explicit user requirement
@@ -46,10 +47,10 @@ Personal productivity CLI, greenfield build (no prior version despite the "v2" w
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| `todos.json` stored per-directory (cwd) rather than one global file in home dir | Lets users keep independent todo lists per project folder | — Pending |
-| Item reference in commands is a positional index from `todo list`, not a stable ID | Simpler UX for a small personal tool; accepted tradeoff that numbers shift as pending items change | — Pending |
-| Completed items are soft-deleted (flagged done) rather than removed from the file | Preserves history and leaves room for a future "show all" view | — Pending |
-| Installed as a global npm bin rather than invoked via `node index.js` | Matches real CLI ergonomics (`todo add ...` instead of `node index.js add ...`) | — Pending |
+| `todos.json` stored per-directory (cwd) rather than one global file in home dir | Lets users keep independent todo lists per project folder | Validated in Phase 1 |
+| Item reference in commands is a positional index from `todo list`, not a stable ID | Simpler UX for a small personal tool; accepted tradeoff that numbers shift as pending items change | Validated in Phase 1 |
+| Completed items are soft-deleted (flagged done) rather than removed from the file | Preserves history and leaves room for a future "show all" view | Validated in Phase 1 |
+| Installed as a global npm bin rather than invoked via `node index.js` | Matches real CLI ergonomics (`todo add ...` instead of `node index.js add ...`) | Pending — Phase 2 |
 
 ## Evolution
 
@@ -69,4 +70,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-07-07 after initialization*
+*Last updated: 2026-07-07 after Phase 1: Core Todo Management*
