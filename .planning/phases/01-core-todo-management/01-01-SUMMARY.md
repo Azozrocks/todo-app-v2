@@ -145,3 +145,7 @@ None - no external service configuration required.
 ---
 *Phase: 01-core-todo-management*
 *Completed: 2026-07-07*
+
+## Self-Check: PASSED
+
+All created files verified present on disk (package.json, lib/storage.js, bin/todo.js, test/add.test.js, .gitignore, this SUMMARY.md). All task commits verified in git log (9e13c5b, 8287555, c40946c).
