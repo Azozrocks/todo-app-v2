@@ -32,10 +32,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. Completed items remain stored in `todos.json` (flagged done, not deleted) rather than being removed
   5. Running the tool from different directories produces independent todo lists, since each directory has its own `todos.json`
 
-**Plans**: 2 plans
+**Plans**: 1/2 plans executed
 **Wave 1**
 
-- [ ] 01-01-PLAN.md — Walking Skeleton: scaffold + storage module + `add` slice (end-to-end)
+- [x] 01-01-PLAN.md — Walking Skeleton: scaffold + storage module + `add` slice (end-to-end)
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
@@ -62,5 +62,5 @@ Phases execute in numeric order: 1 → 2
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Core Todo Management | 0/2 | Not started | - |
+| 1. Core Todo Management | 1/2 | In Progress|  |
 | 2. Global CLI Distribution | 0/TBD | Not started | - |
