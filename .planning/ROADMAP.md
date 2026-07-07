@@ -13,7 +13,7 @@ A zero-dependency Node.js CLI for managing personal to-do items. The build ships
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Core Todo Management** - Add, list, and complete todos with persistent per-directory storage
+- [x] **Phase 1: Core Todo Management** - Add, list, and complete todos with persistent per-directory storage (completed 2026-07-07)
 - [ ] **Phase 2: Global CLI Distribution** - Install and run the tool as a dependency-free global `todo` command
 
 ## Phase Details
@@ -32,14 +32,14 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. Completed items remain stored in `todos.json` (flagged done, not deleted) rather than being removed
   5. Running the tool from different directories produces independent todo lists, since each directory has its own `todos.json`
 
-**Plans**: 1/2 plans executed
+**Plans**: 2/2 plans complete
 **Wave 1**
 
 - [x] 01-01-PLAN.md — Walking Skeleton: scaffold + storage module + `add` slice (end-to-end)
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
-- [ ] 01-02-PLAN.md — `list` + `done` slices (view pending, complete via positional soft-delete)
+- [x] 01-02-PLAN.md — `list` + `done` slices (view pending, complete via positional soft-delete)
 
 ### Phase 2: Global CLI Distribution
 
@@ -62,5 +62,5 @@ Phases execute in numeric order: 1 → 2
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Core Todo Management | 1/2 | In Progress|  |
+| 1. Core Todo Management | 2/2 | Complete   | 2026-07-07 |
 | 2. Global CLI Distribution | 0/TBD | Not started | - |

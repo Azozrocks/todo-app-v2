@@ -8,14 +8,14 @@
 ### Core Commands
 
 - [x] **CORE-01**: User can add a new todo item via `todo add "<text>"`
-- [ ] **CORE-02**: User can list pending todo items via `todo list`, numbered by their position in the pending list
-- [ ] **CORE-03**: User can mark an item done via `todo done <n>`, where `<n>` is the position number shown by the most recent `todo list`
+- [x] **CORE-02**: User can list pending todo items via `todo list`, numbered by their position in the pending list
+- [x] **CORE-03**: User can mark an item done via `todo done <n>`, where `<n>` is the position number shown by the most recent `todo list`
 
 ### Storage
 
 - [x] **STOR-01**: Todo items persist to a `todos.json` file in the current working directory
-- [ ] **STOR-02**: Completed items are retained in `todos.json` (flagged done) rather than deleted
-- [ ] **STOR-03**: `todo list` shows only pending items by default (done items hidden)
+- [x] **STOR-02**: Completed items are retained in `todos.json` (flagged done) rather than deleted
+- [x] **STOR-03**: `todo list` shows only pending items by default (done items hidden)
 
 ### Distribution
 
@@ -49,11 +49,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | CORE-01 | Phase 1 | Complete |
-| CORE-02 | Phase 1 | Pending |
-| CORE-03 | Phase 1 | Pending |
+| CORE-02 | Phase 1 | Complete |
+| CORE-03 | Phase 1 | Complete |
 | STOR-01 | Phase 1 | Complete |
-| STOR-02 | Phase 1 | Pending |
-| STOR-03 | Phase 1 | Pending |
+| STOR-02 | Phase 1 | Complete |
+| STOR-03 | Phase 1 | Complete |
 | DIST-01 | Phase 2 | Pending |
 | DIST-02 | Phase 2 | Pending |
 
