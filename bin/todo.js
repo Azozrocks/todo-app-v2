@@ -25,12 +25,29 @@ function handleAdd(rest) {
   console.log('Added.');
 }
 
+function handleList() {
+  const todos = readTodos();
+  const pending = todos.filter((t) => t.done === false);
+
+  if (pending.length === 0) {
+    console.log("No pending todos. You're all caught up!");
+    return;
+  }
+
+  pending.forEach((todo, i) => {
+    console.log(`${i + 1}. ${todo.text}`);
+  });
+}
+
 function main() {
   const [cmd, ...rest] = process.argv.slice(2);
 
   switch (cmd) {
     case 'add':
       handleAdd(rest);
+      break;
+    case 'list':
+      handleList();
       break;
     default:
       printUsage();
